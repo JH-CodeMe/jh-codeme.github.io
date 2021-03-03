@@ -8,7 +8,7 @@
 # Theme Settings
 #
 # Review documentation to determine if you should use `theme` or `remote_theme`
-https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
+# https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
 # theme                  : "minimal-mistakes-jekyll"
 remote_theme: "mmistakes/minimal-mistakes@4.22.0"
@@ -19,8 +19,8 @@ locale                   : "en-US"
 title                    : "Code Me"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "CodeMe"
-description              : "죽전고등학교 코딩동아리 CodeMe"
+name                     : "코드미"
+description              : "죽전고등학교 코딩동아리"
 url                      : "jh-codeme.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
