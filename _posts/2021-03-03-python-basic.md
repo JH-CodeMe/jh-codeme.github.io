@@ -177,8 +177,9 @@ numlist = [1, 2, 5, 1]
 print(numlist[1])
 print(numlist.size())
 ```
-출력: 2 <br>
-     4
+출력: <br>
+2 <br>
+4
 
 첫줄은 mylist라는 빈 리스트를 선언하고 두번째 줄은 1, 2, 5, 1이라는 값이 담긴 리스트를 선언합니다.
 이 요소들에 접근할때는 인덱스라는 것을 사용하는데 인덱스는 0부터 시작하기 때문에 첫번째 값은 0, 두번째 값은 1, 세번째 값은 2 ... 이런식입니다.
@@ -199,43 +200,43 @@ mydict[key] = value
 # 5. 조건문
 ## if문
 ``` python
-if(True):
+if True:
   print("it is true")
 ```
 출력: it is true
 
-기본적으로 if문은 괄호 안의 값이 True 이면 아래 내용을 실행합니다. 괄호 안의 값은 변수나 함수가 될 수도 있고 연산자가 있는 값이 될 수도 있습니다. 다른 예를 들어보겠습니다.
+기본적으로 if문은 뒤의 값이 True 이면 아래 내용을 실행합니다. 괄호 안의 값은 변수나 함수가 될 수도 있고 연산자가 있는 값이 될 수도 있습니다. 다른 예를 들어보겠습니다.
 ``` python
-if(1 == 1):
+if1 == 1:
   print(it is true)
 ```
 출력: it is true
 
 ``` python
 isOn = False
-if(isOn):
+if isOn:
 ```
 출력: 없음
 ``` python
 num = 2
 isOn = False
-if(num == 2 or isOn):
+if num == 2 or isOn:
   print("executed")
 ```
 출력: executed
 
-## else if 문
-여러개의 if 문을 이어서 사용할 때 else if 문을 사용합니다. 예시는 밑의 else문과 같이 알아보겠습니다
+## elif 문
+여러개의 if 문을 이어서 사용할 때 elif 문을 사용합니다. 예시는 밑의 else문과 같이 알아보겠습니다
 ## else 문
-if-else if 문 마지막에 사용하며 이러한 조건들이 모두 False 이면 실행됩니다.
+if-elif 문 마지막에 사용하며 이러한 조건들이 모두 False 이면 실행됩니다.
 
 ex)
 ``` python
 mynum = 2
 num = 4
-if(mynum == 3):
+if mynum == 3:
   print("hi")
-else if(num == 2):
+elif num == 2:
   print("hi")
 else:
   print("this is else")
@@ -246,16 +247,16 @@ else:
 # 6. 반복문
 ## 6.1. while
 ``` python
-while(True):
+while True:
   print(hi)
 ```
-출력:
+출력: <br>
 hi <br>
 hi <br>
 hi <br>
 hi <br>
 .... 무한반복
 
-while 문은 괄호 안이 True일 때 계속 반복합니다.
+while 문은 뒤의 값이 True일 때 계속 반복합니다.
 ## 6.2. for
-for()
+다른 언어 
