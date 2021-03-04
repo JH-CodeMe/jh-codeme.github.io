@@ -167,7 +167,36 @@ myprint("Hello World!")
 
 사실 함수를 사용하지 않고도 프로그래밍이 어느정도는 가능합니다. 하지만 반복적인 일을 할 때 코드의 길이를 줄이고 가독성에도 좋고 궁극적으로 코딩을 하는 사람의 수고가 덜어지니 사용하는 편이 좋습니다. 또 재귀함수라는 함수를 사용하지 않고선 구현이 힘든 기능도 있습니다.
 여기서 재귀함수를 간단하게 알아보면 함수 안에서 함수 자신을 호출하는 함수입니다.
-# 4. 조건문
+# 4. 리스트, 딕셔너리
+아까 파이썬의 타입에 대해 간단하게 설명할 때 list와 dict가 나왔습니다. list는 말그대로 리스트이고 dict는 딕셔너리를 뜻하는데요 각각 알아보겠습니다
+## 4.1. 리스트
+리스트의 선언
+``` python
+mylist = []
+numlist = [1, 2, 5, 1]
+print(numlist[1])
+print(numlist.size())
+```
+출력: 2
+     4
+
+첫줄은 mylist라는 빈 리스트를 선언하고 두번째 줄은 1, 2, 5, 1이라는 값이 담긴 리스트를 선언합니다.
+이 요소들에 접근할때는 인덱스라는 것을 사용하는데 인덱스는 0부터 시작하기 때문에 첫번째 값은 0, 두번째 값은 1, 세번째 값은 2 ... 이런식입니다.
+그렇기 때문에 세번째 줄에 numlist[1]은 numlist의 두번째 값을 반환합니다.
+리스트가 갖고 있는 함수들도 있는데 몇가지 정리해보면
+size()   리스트의 크기를 나타냅니다(여기서 주의할 점은 인덱스는 0부터 시작하지만 size는 말그대로 크기를 나타냅니다)
+append(value)   리스트 끝에 값을 추가합니다.
+따라서 numlist.size() 함수는 4를 반환하고 그 값이 print 함수에 전달되어 4가 출력되었습니다.
+## 4.2. 딕셔너리
+``` python
+mydict = {"first": "hi", "second": "hello"}
+print(mydict["first"])
+```
+딕셔너리는 기본적으로 key: value의 형태를 가집니다. key: value 의 형태가 리스트처럼 여러개가 있는 형태입니다.
+딕셔너리는 인덱스대신 [key] 로 값에 접근합니다. 값 추가나 변경은
+mydict[key] = value
+여기서 key가 없는 key면 새로운 key: value 쌍이 추가되고 있는 key면 value로 값이 변경됩니다.
+# 5. 조건문
 ## if문
 ``` python
 if(True):
@@ -182,3 +211,51 @@ if(1 == 1):
 ```
 출력: it is true
 
+``` python
+isOn = False
+if(isOn):
+```
+출력: 없음
+``` python
+num = 2
+isOn = False
+if(num == 2 or isOn):
+  print("executed")
+```
+출력: executed
+
+## else if 문
+여러개의 if 문을 이어서 사용할 때 else if 문을 사용합니다. 예시는 밑의 else문과 같이 알아보겠습니다
+## else 문
+if-else if 문 마지막에 사용하며 이러한 조건들이 모두 False 이면 실행됩니다.
+
+ex)
+``` python
+mynum = 2
+num = 4
+if(mynum == 3):
+  print("hi")
+else if(num == 2):
+  print("hi")
+else:
+  print("this is else")
+```
+출력: this is else
+
+위의 두 print 함수들은 조건에 맞지 않아 실행되지 않고 가장 밑의 else 문만 실행이 된 것을 확인할 수 있습니다.
+# 6. 반복문
+## 6.1. while
+``` python
+while(True):
+  print(hi)
+```
+출력:
+hi
+hi
+hi
+hi
+.... 무한반복
+
+while 문은 괄호 안이 True일 때 계속 반복합니다.
+## 6.2. for
+for()
