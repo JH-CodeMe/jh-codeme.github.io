@@ -130,7 +130,7 @@ three = 3
 mybool = hello == hi and three == three
 print(mybool)
 ```
-hello == hi 의 연산 결과는 False가 나오고 three == three의 연산 결과는 True가 나오는데 and 연산자이므로 둘다 True 가 아니기 때문에 False를 출력합니다.
+hello == hi 의 연산 결과는 False가 나오고 three == 3의 연산 결과는 True가 나오는데 and 연산자이므로 둘다 True 가 아니기 때문에 False를 출력합니다.
 
 이쯤돼서 수학에 연산 순서가 있듯이 연산자의 연산 순서를 간단하게 알아보겠습니다. 아래로 갈수록 점점 더 늦게 연산됩니다.
 **
@@ -177,8 +177,8 @@ numlist = [1, 2, 5, 1]
 print(numlist[1])
 print(numlist.size())
 ```
-출력: <br>
-2 <br>
+출력: 
+2 
 4
 
 첫줄은 mylist라는 빈 리스트를 선언하고 두번째 줄은 1, 2, 5, 1이라는 값이 담긴 리스트를 선언합니다.
@@ -198,7 +198,17 @@ print(mydict["first"])
 mydict[key] = value
 여기서 key가 없는 key면 새로운 key: value 쌍이 추가되고 있는 key면 value로 값이 변경됩니다.
 ## 4.3. 튜플
+수학에서 집합과 같습니다. 순서는 무조건 오름차순이고 값은 숫자만 들어갈 수 있습니다. 타입은 set이지만 튜플이라고 많이 불러서 여기서는 튜플로 설명했습니다.
+``` python
+mytuple = {1, 4, 5, 1, 2}
+print(mytuple)
+mytuple.add(2)
+print(mytuple)
+```
+출력:
 
+첫번째 줄에선 튜플이기 때문에 겹치는 숫자는 없어지고 오름차순으로 정렬됩니다.
+그리고 출력된 후 2를 요소로 추가한 후 다시 정렬되어서 출력됩니다.
 # 5. 조건문
 ## if문
 ``` python
@@ -268,4 +278,3 @@ mylist = [1, 2, 4, 5, 10, 52]
 for i in mylist:
   print(i)
 ```
-
