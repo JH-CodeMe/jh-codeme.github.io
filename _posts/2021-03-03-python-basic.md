@@ -147,7 +147,7 @@ hello == hi 의 연산 결과는 False가 나오고 three == 3의 연산 결과�
 함수의 선언은 다음과 같이 이루어집니다
 ``` python
 def myfunc(mynum, myvar):
-  return mynum + myvar
+	return mynum + myvar
 print(myfunc(1, 4))
 ```
 출력: 5
@@ -158,7 +158,7 @@ return은 반환한다는 의미로 위 코드에서는 mynum 과 myvar 을 합�
 반면 return 값이 없는 함수도 있는데 그 경우 반환하는 값은 없고 함수의 내용만 실행합니다.
 ``` python
 def myprint(string):
-  print(string)
+	print(string)
 myprint("Hello World!")
 ```
 출력: Hello World!
@@ -177,35 +177,37 @@ numlist = [1, 2, 5, 1]
 print(numlist[1])
 print(numlist.size())
 ```
-출력: 
-2 
+출력:  
+2  
 4
 
 첫줄은 mylist라는 빈 리스트를 선언하고 두번째 줄은 1, 2, 5, 1이라는 값이 담긴 리스트를 선언합니다.
-이 요소들에 접근할때는 인덱스라는 것을 사용하는데 인덱스는 0부터 시작하기 때문에 첫번째 값은 0, 두번째 값은 1, 세번째 값은 2 ... 이런식입니다.
+이 요소들에 접근할때는 인덱스라는 것을 사용하는데 인덱스는 0부터 시작하기 때문에 첫번째 값은 0, 두번째 값은 1, 세번째 값은 2 ... 이런식입니다.  
 그렇기 때문에 세번째 줄에 numlist[1]은 numlist의 두번째 값을 반환합니다.
-리스트가 갖고 있는 함수들도 있는데 몇가지 정리해보면
+리스트가 갖고 있는 함수들도 있는데 몇가지 정리해보면  
 size()   리스트의 크기를 나타냅니다(여기서 주의할 점은 인덱스는 0부터 시작하지만 size는 말그대로 크기를 나타냅니다)
-append(value)   리스트 끝에 값을 추가합니다.
+append(value)   리스트 끝에 값을 추가합니다.  
 따라서 numlist.size() 함수는 4를 반환하고 그 값이 print 함수에 전달되어 4가 출력되었습니다.
 ## 4.2. 딕셔너리
 ``` python
 mydict = {"first": "hi", "second": "hello"}
 print(mydict["first"])
 ```
-딕셔너리는 기본적으로 key: value의 형태를 가집니다. key: value 의 형태가 리스트처럼 여러개가 있는 형태입니다.
-딕셔너리는 인덱스대신 [key] 로 값에 접근합니다. 값 추가나 변경은
-mydict[key] = value
+딕셔너리는 기본적으로 key: value의 형태를 가집니다. key: value 의 형태가 리스트처럼 여러개가 있는 형태입니다.  
+딕셔너리는 인덱스대신 [key] 로 값에 접근합니다. 값 추가나 변경은  
+mydict[key] = value  
 여기서 key가 없는 key면 새로운 key: value 쌍이 추가되고 있는 key면 value로 값이 변경됩니다.
 ## 4.3. 튜플
 수학에서 집합과 같습니다. 순서는 무조건 오름차순이고 값은 숫자만 들어갈 수 있습니다. 타입은 set이지만 튜플이라고 많이 불러서 여기서는 튜플로 설명했습니다.
 ``` python
 mytuple = {1, 4, 5, 1, 2}
 print(mytuple)
-mytuple.add(2)
+mytuple.add(3)
 print(mytuple)
 ```
-출력:
+출력:  
+{1, 2, 4, 5}  
+{1, 2, 3, 4, 5}
 
 첫번째 줄에선 튜플이기 때문에 겹치는 숫자는 없어지고 오름차순으로 정렬됩니다.
 그리고 출력된 후 2를 요소로 추가한 후 다시 정렬되어서 출력됩니다.
@@ -213,27 +215,28 @@ print(mytuple)
 ## if문
 ``` python
 if True:
-  print("it is true")
+	print("it is true")
 ```
 출력: it is true
 
 기본적으로 if문은 뒤의 값이 True 이면 아래 내용을 실행합니다. 괄호 안의 값은 변수나 함수가 될 수도 있고 연산자가 있는 값이 될 수도 있습니다. 다른 예를 들어보겠습니다.
 ``` python
 if1 == 1:
-  print(it is true)
+	print(it is true)
 ```
 출력: it is true
 
 ``` python
 isOn = False
 if isOn:
+	print("hi")
 ```
 출력: 없음
 ``` python
 num = 2
 isOn = False
 if num == 2 or isOn:
-  print("executed")
+	print("executed")
 ```
 출력: executed
 
@@ -247,11 +250,11 @@ ex)
 mynum = 2
 num = 4
 if mynum == 3:
-  print("hi")
+	print("hi")
 elif num == 2:
-  print("hi")
+	print("hi")
 else:
-  print("this is else")
+	print("this is else")
 ```
 출력: this is else
 
@@ -260,21 +263,48 @@ else:
 ## 6.1. while
 ``` python
 while True:
-  print(hi)
+	print(hi)
 ```
-출력: <br>
-hi <br>
-hi <br>
-hi <br>
-hi <br>
+출력:  
+hi  
+hi  
+hi  
+hi  
 .... 무한반복
 
 while 문은 뒤의 값이 True일 때 계속 반복합니다.
 ## 6.2. for
-다른 언어를 해보신분들이라면 파이썬의 for 문은 색다르게 느껴지실 겁니다. 굉장히 편한 형태이지만 그만큼 다른 언어와 문법이 다르다는 단점을 갖고 있습니다.
+다른 언어를 해보신분들이라면 파이썬의 for 문은 색다르게 느껴지실 겁니다. 굉장히 편한 형태이지만 그만큼 다른 언어와 문법이 다르다는 단점을 갖고 있습니다.  
 기본적으로 파이썬의 for 문은 for in 형태입니다. in 뒤에는 리스트, 문자열, 튜플이 오고 in 앞에는 변수가 옵니다. for 문은 in 뒤에 있는 리스트의 크기만큼 반복을 수행합니다. 예시를 들어보면
 ``` python
 mylist = [1, 2, 4, 5, 10, 52]
 for i in mylist:
-  print(i)
+	print(i)
 ```
+출력:  
+1  
+2  
+4  
+5  
+10  
+52  
+
+리스트의 크기가 6이므로 6번 수행했습니다. 수행 할 때마다 i의 값이 mylist의 0번 인덱스부터 하나씩 올라갑니다.  
+하지만 반복을 정해진 수만큼 수행하는 경우도 있을겁니다. 그렇다고 그때마다 정해진 크기의 리스트를 생성할 수도 없습니다. 하지만 파이썬에는  range라는 함수가 있습니다.  
+``` python
+range(10)
+```
+위 코드는 0 부터 10 미만까지를 포함하는 객체를 생성합니다. 여기서 객체는 설명하면 복잡하니 그냥 0부터 10 미만의 정수가 들어있는 리스트라고 생각하시면 됩니다.
+
+``` python
+for i in range(5):
+	print("hi")
+```
+출력:  
+hi  
+hi  
+hi  
+hi  
+hi  
+위처럼 5번 반복합니다.
+
