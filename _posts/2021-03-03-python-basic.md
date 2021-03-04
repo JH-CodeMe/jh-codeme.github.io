@@ -177,7 +177,7 @@ numlist = [1, 2, 5, 1]
 print(numlist[1])
 print(numlist.size())
 ```
-출력: 2
+출력: 2 <br>
      4
 
 첫줄은 mylist라는 빈 리스트를 선언하고 두번째 줄은 1, 2, 5, 1이라는 값이 담긴 리스트를 선언합니다.
@@ -250,10 +250,10 @@ while(True):
   print(hi)
 ```
 출력:
-hi
-hi
-hi
-hi
+hi <br>
+hi <br>
+hi <br>
+hi <br>
 .... 무한반복
 
 while 문은 괄호 안이 True일 때 계속 반복합니다.
