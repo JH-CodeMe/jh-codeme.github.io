@@ -1,3 +1,4 @@
+
 ---
 title: "파이썬 기초 입문"
 excerpt: "파이썬을 모르는 학생들은 필독!"
@@ -348,5 +349,76 @@ print("Hello\nWorld")
 Hello  
 World  
 이런식으로 개행 문자가 문자열 사이에 있으면 개행이 됩니다.
+
+# 8. 이외
+## 8.1. 주석
+주석은 코드안에서 설명을하는 역할을 합니다. 주석 안의 내용은 코드에 영향을 주지 않습니다. 그래서 대부분 코드에 대한 설명을 적는 편입니다.
+``` python
+print("Hello, World!") # Hello World는 모든 언어의 시작입니다
+```
+이런식으로 코드에 영향이 가지 않게 설명을 할 수 있습니다. 위의 주석은 한줄 주석이고 주석을 여러줄에 걸쳐서 쓸때는 하나 하나 #을 붙여주지 않고 아래와 같이 사용합니다.
+``` python
+print("Hello, World!")
+"""
+여러줄
+주석
+입니다
+"""
+```
+큰따옴표가 아닌 작은따옴표도 가능합니다.
+## 8.2. 클래스
+클래스는 자동차가 있다고 하면 자동차의 설계도입니다. 그리고 객체는 설계도를 이용해 만든 자동차로 비유할 수 있습니다. 
+``` python
+class Car():
+	engine = "V8"
+	color = "black"
+	cartype = "SUV"
+car = Car()
+print(car.engine, car.color, car.cartype)
+```
+출력:  
+V8 black SUV  
+하지만 객체안의 변수 값이 바뀐다고 클래스 자체의 변수나 다른 객체의 변수가 바뀌진 않습니다. 예를 들어보겠습니다.
+``` python
+class Car():
+	engine = "V8"
+	color = "black"
+	cartype = "SUV"
+car = Car()
+mycar = Car()
+mycar.color = "red"
+print(car.color)
+print(mycar.color)
+```
+출력:  
+black  
+red  
+mycar 객체의 color 변수값을 변경해주었지만 car 객체의 변수값은 변하지 않았습니다.  
+## 8.3 라이브러리
+import를 통해 라이브러리를 추가할 수 있습니다. 먼저 파이썬 내장 라이브러리인 random 을 사용해보겠습니다. 내장 라이브러리이므로 설치가 필요없습니다.
+``` python
+import random
+print(random.random())
+```
+출력: 0.3605802633142553  (저의 경우)
+위와 같이 0 이상 1미만의 숫자가 말그대로 랜덤으로 나올 것입니다. 이것을 난수라고 합니다.
+``` python
+import random
+print(random.randrange(10))
+```
+출력: 5 (저의 경우)
+아까 배웠던 range 함수를 생각하시면 편합니다. 0 이상 10 미만의 정수를 랜덤으로 뽑아서 반환합니다.
+### pip
+pip는 외부 라이브러리를 사용할 수 있는 저장소입니다.
+윈도우키 + Q 로 검색 메뉴에 들어가서 cmd 를 검색하고 실행합니다.    
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py  
+명령어를 복사해서 그대로 붙여넣기해줍니다.  
+그리고 명령어가 다 실행되었다면  
+python get-pip.py  
+명령어를 실행해줍니다.  
+pip
+를 입력해서 pip를 한번 업그레이드 해줍니다.  
+pip install 라이브러리_이름  
+으로 파이썬 외부 라이브러리를 설치할 수 있습니다.
 
 > 작성자: 임성완
