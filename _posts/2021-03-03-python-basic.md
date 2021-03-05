@@ -3,7 +3,7 @@ title: "파이썬 기초 입문"
 excerpt: "파이썬을 모르는 학생들은 필독!"
 categories:
   - 기초 입문
-last_modified_at: 2021-03-03T21:00:00-22:00
+last_modified_at: 2021-03-05T18:00:00-22:00:00
 ---
 
 파이썬 Python
