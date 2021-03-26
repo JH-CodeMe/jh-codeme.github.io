@@ -183,7 +183,7 @@ myprint("Hello World!")
 mylist = []
 numlist = [1, 2, 5, 1]
 print(numlist[1])
-print(numlist.size())
+print(len(numlist))
 ```
 출력:  
 2  
@@ -193,9 +193,9 @@ print(numlist.size())
 이 요소들에 접근할때는 인덱스라는 것을 사용하는데 인덱스는 0부터 시작하기 때문에 첫번째 값은 0, 두번째 값은 1, 세번째 값은 2 ... 이런식입니다.  
 그렇기 때문에 세번째 줄에 numlist[1]은 numlist의 두번째 값을 반환합니다.
 리스트가 갖고 있는 함수들도 있는데 몇가지 정리해보면  
-size()   리스트의 크기를 나타냅니다(여기서 주의할 점은 인덱스는 0부터 시작하지만 size는 말그대로 크기를 나타냅니다)
+len(list)   리스트의 크기를 나타냅니다(여기서 주의할 점은 인덱스는 0부터 시작하지만 size는 말그대로 크기를 나타냅니다)
 append(value)   리스트 끝에 값을 추가합니다.  
-따라서 numlist.size() 함수는 4를 반환하고 그 값이 print 함수에 전달되어 4가 출력되었습니다.
+따라서 len(numlist) 함수는 4를 반환하고 그 값이 print 함수에 전달되어 4가 출력되었습니다.
 ## 4.2. 딕셔너리
 ``` python
 mydict = {"first": "hi", "second": "hello"}
