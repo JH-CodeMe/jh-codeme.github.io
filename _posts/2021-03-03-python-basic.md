@@ -219,9 +219,9 @@ mydict[key] = value
 수학에서 집합과 같습니다. 순서는 무조건 오름차순이고 값은 숫자만 들어갈 수 있습니다. 타입은 set이지만 튜플이라고 많이 불러서 여기서는 튜플로 설명했습니다.
 ``` python
 myset = {1, 4, 5, 1, 2}
-print(mytuple)
+print(myset)
 myset.add(3)
-print(mytuple)
+print(myset)
 ```
 출력:  
 {1, 2, 4, 5}  
