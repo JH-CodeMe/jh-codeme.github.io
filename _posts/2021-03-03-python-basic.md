@@ -215,12 +215,12 @@ print(mydict["first"])
 딕셔너리는 인덱스대신 [key] 로 값에 접근합니다. 값 추가나 변경은  
 mydict[key] = value  
 여기서 key가 없는 key면 새로운 key: value 쌍이 추가되고 있는 key면 value로 값이 변경됩니다.
-## 4.3. 튜플
+## 4.3. 세트
 수학에서 집합과 같습니다. 순서는 무조건 오름차순이고 값은 숫자만 들어갈 수 있습니다. 타입은 set이지만 튜플이라고 많이 불러서 여기서는 튜플로 설명했습니다.
 ``` python
-mytuple = {1, 4, 5, 1, 2}
+myset = {1, 4, 5, 1, 2}
 print(mytuple)
-mytuple.add(3)
+myset.add(3)
 print(mytuple)
 ```
 출력:  
@@ -239,8 +239,8 @@ if True:
 
 기본적으로 if문은 뒤의 값이 True 이면 아래 내용을 실행합니다. 괄호 안의 값은 변수나 함수가 될 수도 있고 연산자가 있는 값이 될 수도 있습니다. 다른 예를 들어보겠습니다.
 ``` python
-if1 == 1:
-	print(it is true)
+if 1 == 1:
+	print("it is true")
 ```
 출력: it is true
 
